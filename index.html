@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sofía Sandoval — UX Designer</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#inicio" class="logo">
+    <img src="logo.png" alt="Sofía Sandoval">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#sobre">Sobre mí</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#proyectos" onclick="toggleMenu()">Proyectos</a>
+  <a href="#sobre" onclick="toggleMenu()">Sobre mí</a>
+  <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+</div>
+
+<!-- HERO -->
+<!-- IMAGEN DE FONDO: agrega hero-bg.jpg a tu carpeta -->
+<!-- style.css ya tiene: background-image: url('hero-bg.jpg') en #inicio -->
+<section id="inicio">
+  <div class="hero-orb orb1"></div>
+  <div class="hero-orb orb2"></div>
+
+  <div class="hero-left fade-up">
+    <div class="hero-tag">UX / UI Designer</div>
+    <h1>Diseño que<br><em>conecta</em></h1>
+    <div class="hero-name">Sofía Sandoval</div>
+    <p class="hero-desc">
+      Diseñadora industrial especializada en UX. Creo experiencias centradas en las personas — desde la investigación hasta el prototipo final.
+    </p>
+    <div class="hero-btns">
+      <a href="#proyectos" class="btn-coral">Ver proyectos →</a>
+      <a href="#contacto" class="btn-outline">¿Colaboramos?</a>
+    </div>
+  </div>
+
+  <div class="hero-right fade-up" style="transition-delay:0.2s">
+    <div style="position:relative; display:inline-block;">
+      <!-- <div class="skills-float">
+        <div class="skills-dot"></div>
+        Disponible para proyectos
+      </div> -->
+      <!-- FOTO DE PERFIL: reemplaza perfil.jpg con tu archivo -->
+      <div class="hero-img-wrap">
+        <img src="fondo.jpg" alt="Sofía Sandoval">
+      </div>
+    
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos">
+  <div class="section-label">Trabajo</div>
+  <h2>Proyectos <em>destacados</em></h2>
+  <p class="section-intro">Experiencias diseñadas con metodología centrada en el usuario, desde investigación hasta prototipo de alta fidelidad.</p>
+
+  <div class="proyectos-grid">
+
+    <!-- PROYECTO 1: MEMORIAS VIVAS -->
+    <div class="proyecto-card fade-up" onclick="openModal('memorias')">
+      <div class="proyecto-img">
+        <!-- IMAGEN: agrega proyecto-memorias.jpg a tu carpeta -->
+        <img src="memoriasvivas.png" alt="Memorias Vivas">
+        <div class="proyecto-tipo">Proyecto de Título</div>
+      </div>
+      <div class="proyecto-body">
+        <div class="proyecto-tags">
+          <span class="tag">UX/UI</span>
+          <span class="tag">Figma</span>
+          <span class="tag">Phygital</span>
+        </div>
+        <h3>Memorias Vivas</h3>
+        <p>Plataforma que resignifica el duelo a través de ritos simbólicos y objetos de conmemoración.</p>
+        <div class="proyecto-footer">
+          <span class="proyecto-duracion">10 meses</span>
+          <div class="proyecto-arrow">→</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROYECTO 2: MIM VECINOS -->
+    <div class="proyecto-card fade-up" style="transition-delay:0.1s" onclick="openModal('mim')">
+      <div class="proyecto-img">
+        <!-- IMAGEN: agrega proyecto-mim.jpg a tu carpeta -->
+        <img src="mimvecinos.png" alt="MIM Vecinos">
+        <div class="proyecto-tipo">Práctica Profesional</div>
+      </div>
+      <div class="proyecto-body">
+        <div class="proyecto-tags">
+          <span class="tag">UX/UI</span>
+          <span class="tag">App</span>
+          <span class="tag">Comunidad</span>
+        </div>
+        <h3>MIM Vecinos</h3>
+        <p>App para fortalecer la vinculación de los residentes de La Granja con el Museo Interactivo Mirador.</p>
+        <div class="proyecto-footer">
+          <span class="proyecto-duracion">5 meses</span>
+          <div class="proyecto-arrow">→</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROYECTO 3: BIOMATERIA -->
+    <div class="proyecto-card fade-up" style="transition-delay:0.2s" onclick="openModal('biomateria')">
+      <div class="proyecto-img">
+        <!-- IMAGEN: agrega proyecto-biomateria.jpg a tu carpeta -->
+        <img src="biomateria.png" alt="BioMateria">
+        <div class="proyecto-tipo">Investigación</div>
+      </div>
+      <div class="proyecto-body">
+        <div class="proyecto-tags">
+          <span class="tag">Front-end</span>
+          <span class="tag">IA</span>
+          <span class="tag">GUI Desktop</span>
+        </div>
+        <h3>BioMateria</h3>
+        <p>Software para diseñadores que integra IA mediante protocolo OSC para crear biomateriales.</p>
+        <div class="proyecto-footer">
+          <span class="proyecto-duracion">5 meses</span>
+          <div class="proyecto-arrow">→</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROYECTO 4: PULLMAN -->
+    <div class="proyecto-card fade-up" onclick="openModal('pullman')">
+      <div class="proyecto-img">
+        <!-- IMAGEN: agrega proyecto-pullman.jpg a tu carpeta -->
+        <img src="pullmandelsur.png" alt="Pullman del Sur">
+        <div class="proyecto-tipo">Proyecto Académico</div>
+      </div>
+      <div class="proyecto-body">
+        <div class="proyecto-tags">
+          <span class="tag">UX/UI</span>
+          <span class="tag">Mobile</span>
+          <span class="tag">E-commerce</span>
+        </div>
+        <h3>Pullman del Sur</h3>
+        <p>Rediseño de la app de compra de pasajes con foco en la experiencia de usuarios frecuentes.</p>
+        <div class="proyecto-footer">
+          <span class="proyecto-duracion">5 meses</span>
+          <div class="proyecto-arrow">→</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROYECTO 5: RECIOIL -->
+    <div class="proyecto-card fade-up" style="transition-delay:0.1s" onclick="openModal('recioil')">
+      <div class="proyecto-img">
+        <!-- IMAGEN: agrega proyecto-recioil.jpg a tu carpeta -->
+        <img src="recioil.png" alt="ReciOil">
+        <div class="proyecto-tipo">Proyecto Académico</div>
+      </div>
+      <div class="proyecto-body">
+        <div class="proyecto-tags">
+          <span class="tag">UX/UI</span>
+          <span class="tag">Sustentabilidad</span>
+          <span class="tag">App</span>
+        </div>
+        <h3>ReciOil</h3>
+        <p>App que incentiva el reciclaje de aceite de cocina mediante recompensas y recogida a domicilio.</p>
+        <div class="proyecto-footer">
+          <span class="proyecto-duracion">3 meses</span>
+          <div class="proyecto-arrow">→</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROYECTO 6: ETERNAL LAMP -->
+    <div class="proyecto-card fade-up" style="transition-delay:0.2s" onclick="openModal('lamp')">
+      <div class="proyecto-img">
+        <!-- IMAGEN: agrega proyecto-lamp.jpg a tu carpeta -->
+        <img src="eternal lamp.png" alt="Eternal Lamp">
+        <div class="proyecto-tipo">Proyecto Académico</div>
+      </div>
+      <div class="proyecto-body">
+        <div class="proyecto-tags">
+          <span class="tag">Diseño Industrial</span>
+          <span class="tag">Arduino</span>
+          <span class="tag">Prototipo</span>
+        </div>
+        <h3>Eternal Lamp</h3>
+        <p>Lámpara interactiva con Arduino que activa audios de seres queridos al detectar presencia.</p>
+        <div class="proyecto-footer">
+          <span class="proyecto-duracion">4 meses</span>
+          <div class="proyecto-arrow">→</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODALES -->
+<div class="modal-overlay" id="modal-memorias" onclick="closeModalOnBg(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('memorias')">✕</button>
+    <div class="proyecto-tags" style="margin-bottom:16px">
+      <span class="tag">UX/UI</span><span class="tag">Figma</span><span class="tag">Phygital</span>
+    </div>
+    <h3>Memorias Vivas</h3>
+    <p class="modal-subtitle">Proyecto de Título · Universidad Diego Portales</p>
+    <p class="modal-desc">Plataforma que resignifica el duelo a través de ritos simbólicos, integrando objetos físicos (Eternal Lamp, Recordis Joya, Aura Frame) con una app digital.</p>
+    <p class="modal-section-title">Actividades realizadas</p>
+    <ul class="modal-list">
+      <li>Investigación cualitativa con entrevistas en profundidad</li>
+      <li>Construcción de mapas de empatía</li>
+      <li>Definición de insights emocionales</li>
+      <li>Diseño de experiencia centrada en el usuario</li>
+      <li>Arquitectura de información</li>
+      <li>Prototipado de alta fidelidad en Figma</li>
+      <li>Desarrollo conceptual de propuesta phygital</li>
+    </ul>
+    <div class="modal-meta">
+      <div class="modal-meta-item"><strong>Rol</strong>UX/UI Designer</div>
+      <div class="modal-meta-item"><strong>Duración</strong>10 meses</div>
+      <div class="modal-meta-item"><strong>Tipo</strong>Tesis de Título</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-mim" onclick="closeModalOnBg(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('mim')">✕</button>
+    <div class="proyecto-tags" style="margin-bottom:16px">
+      <span class="tag">UX/UI</span><span class="tag">App</span><span class="tag">Comunidad</span>
+    </div>
+    <h3>MIM Vecinos</h3>
+    <p class="modal-subtitle">Práctica Profesional · Museo Interactivo Mirador</p>
+    <p class="modal-desc">App para fortalecer la vinculación del MIM con los residentes de La Granja. Gestión de entradas, biblioteca, mapa y banco de tiempo.</p>
+    <p class="modal-section-title">Actividades realizadas</p>
+    <ul class="modal-list">
+      <li>Research exploratorio y análisis del servicio existente</li>
+      <li>Definición de flujos principales de usuario</li>
+      <li>Diseño de experiencia centrada en el usuario</li>
+      <li>Prototipado en Figma</li>
+      <li>Colaboración con stakeholders institucionales</li>
+    </ul>
+    <div class="modal-meta">
+      <div class="modal-meta-item"><strong>Rol</strong>UX/UI Designer</div>
+      <div class="modal-meta-item"><strong>Duración</strong>5 meses</div>
+      <div class="modal-meta-item"><strong>Tipo</strong>Práctica Profesional</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-biomateria" onclick="closeModalOnBg(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('biomateria')">✕</button>
+    <div class="proyecto-tags" style="margin-bottom:16px">
+      <span class="tag">Front-end</span><span class="tag">IA</span><span class="tag">GUI Desktop</span>
+    </div>
+    <h3>BioMateria</h3>
+    <p class="modal-subtitle">Proyecto de Investigación · Factoría UDP</p>
+    <p class="modal-desc">GUI desktop para investigación aplicada de biomateriales con comunicación a modelo de IA en tiempo real mediante protocolo OSC.</p>
+    <p class="modal-section-title">Actividades realizadas</p>
+    <ul class="modal-list">
+      <li>Investigación técnica sobre biomateriales y sistemas interactivos</li>
+      <li>Análisis de requerimientos del modelo de IA</li>
+      <li>Diseño de arquitectura de información para GUI desktop</li>
+      <li>Desarrollo en HTML, CSS y JavaScript</li>
+      <li>Integración con IA mediante protocolo OSC</li>
+    </ul>
+    <div class="modal-meta">
+      <div class="modal-meta-item"><strong>Rol</strong>UX/UI + Front-end</div>
+      <div class="modal-meta-item"><strong>Duración</strong>5 meses</div>
+      <div class="modal-meta-item"><strong>Tipo</strong>Investigación</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-pullman" onclick="closeModalOnBg(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('pullman')">✕</button>
+    <div class="proyecto-tags" style="margin-bottom:16px">
+      <span class="tag">UX/UI</span><span class="tag">Mobile</span><span class="tag">E-commerce</span>
+    </div>
+    <h3>Pullman del Sur</h3>
+    <p class="modal-subtitle">Proyecto Académico · Universidad Diego Portales</p>
+    <p class="modal-desc">Rediseño de la experiencia de compra de pasajes con modo de compra rápida y asiento asignado automáticamente.</p>
+    <p class="modal-section-title">Actividades realizadas</p>
+    <ul class="modal-list">
+      <li>Investigación de usuarios y análisis del proceso actual</li>
+      <li>Identificación de puntos de fricción</li>
+      <li>Testeo y optimización de flujos de navegación</li>
+      <li>Arquitectura de información mobile-first</li>
+      <li>Prototipado de alta fidelidad en Figma</li>
+    </ul>
+    <div class="modal-meta">
+      <div class="modal-meta-item"><strong>Rol</strong>UX/UI Designer</div>
+      <div class="modal-meta-item"><strong>Duración</strong>5 meses</div>
+      <div class="modal-meta-item"><strong>Tipo</strong>Proyecto Académico</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-recioil" onclick="closeModalOnBg(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('recioil')">✕</button>
+    <div class="proyecto-tags" style="margin-bottom:16px">
+      <span class="tag">UX/UI</span><span class="tag">Sustentabilidad</span>
+    </div>
+    <h3>ReciOil</h3>
+    <p class="modal-subtitle">Proyecto Académico · Diplomado en Gestión de la Innovación · UDP</p>
+    <p class="modal-desc">App que incentiva el reciclaje de aceite mediante recompensas (Giftcards, donaciones). Conecta con PyMEs que reutilizan el aceite como biodiesel.</p>
+    <p class="modal-section-title">Actividades realizadas</p>
+    <ul class="modal-list">
+      <li>Investigación de usuarios y proceso de reciclaje</li>
+      <li>Identificación de puntos de fricción</li>
+      <li>Arquitectura de información mobile-first</li>
+      <li>Prototipado en Figma</li>
+      <li>Identidad visual digital</li>
+    </ul>
+    <div class="modal-meta">
+      <div class="modal-meta-item"><strong>Rol</strong>UX/UI Designer</div>
+      <div class="modal-meta-item"><strong>Duración</strong>3 meses</div>
+      <div class="modal-meta-item"><strong>Tipo</strong>Proyecto Académico</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-lamp" onclick="closeModalOnBg(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('lamp')">✕</button>
+    <div class="proyecto-tags" style="margin-bottom:16px">
+      <span class="tag">Diseño Industrial</span><span class="tag">Arduino</span>
+    </div>
+    <h3>Eternal Lamp</h3>
+    <p class="modal-subtitle">Proyecto Académico · Universidad Diego Portales</p>
+    <p class="modal-desc">Lámpara de arte en mimbre y madera. Al detectar presencia activa luz y reproduce audios aleatorios de 15–30 segundos de seres queridos.</p>
+    <p class="modal-section-title">Actividades realizadas</p>
+    <ul class="modal-list">
+      <li>Investigación sobre necesidades de compañía y bienestar</li>
+      <li>Conceptualización de objeto interactivo</li>
+      <li>Selección de materiales (mimbre y madera)</li>
+      <li>Integración de sistema electrónico con Arduino</li>
+      <li>Programación de lógica de activación y audios aleatorios</li>
+      <li>Construcción y testeo de prototipo funcional</li>
+    </ul>
+    <div class="modal-meta">
+      <div class="modal-meta-item"><strong>Rol</strong>Diseñadora Industrial</div>
+      <div class="modal-meta-item"><strong>Duración</strong>4 meses</div>
+      <div class="modal-meta-item"><strong>Tipo</strong>Proyecto Académico</div>
+    </div>
+  </div>
+</div>
+
+<!-- SOBRE MÍ -->
+<section id="sobre">
+  <div>
+    <div class="section-label">Trayectoria</div>
+    <h2>Educación &<br><em>Experiencia</em></h2>
+    <div class="sobre-timeline">
+      <div class="timeline-item fade-up">
+        <div class="timeline-year">2025</div>
+        <div class="timeline-content">
+          <h4>Diseñadora UX</h4>
+          <p>Realización de landing pages — Consultora digital Kings</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-year">2025</div>
+        <div class="timeline-content">
+          <h4>Ayudante de Cátedra</h4>
+          <p>Asignatura Cuerpo, Movimiento y Código — Universidad Diego Portales.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-year">2024</div>
+        <div class="timeline-content">
+          <h4>Práctica Profesional — MIM</h4>
+          <p>Fundación Nuevos Tiempos · Centro Interactivo de los Conocimientos.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-content">
+          <h4>Google UX — Coursera</h4>
+          <p>Certificación UX UI. Minor en Gestión de la Innovación, Universidad Diego Portales.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-content">
+          <h4>Gestión de la Innovación — Universidad Diego Portales</h4>
+          <p>Minor en Gestión de la Innovación, UDP.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-content">
+          <h4>Investigadora — UDP</h4>
+          <p>Proyectos financiados por Factoría UDP: template de portafolio y software de biomateriales con IA.</p>
+        </div>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-year">2021–25</div>
+        <div class="timeline-content">
+          <h4>Diseño Industrial — UDP</h4>
+          <p>Titulada con distinción máxima. Top 10% de la generación.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sobre-right fade-up">
+    <div class="section-label">Sobre mí</div>
+    <p class="sobre-bio">
+      Soy <strong>diseñadora industrial especializada en UX</strong> con más de dos años de experiencia en el desarrollo de apps y web. Me titulé con distinción máxima en UDP.
+    </p>
+    <p class="sobre-bio">
+      He trabajado en proyectos diversos como apps de duelo, software con IA, plataformas comunitarias y objetos interactivos con Arduino.
+    </p>
+    <div class="section-label" style="margin-top:36px">Herramientas</div>
+    <div class="habilidades-grid">
+      <span class="habilidad">Figma</span>
+      <span class="habilidad">Adobe Illustrator</span>
+      <span class="habilidad">Miro</span>
+      <span class="habilidad">GitHub</span>
+      <span class="habilidad">HTML · CSS · JS</span>
+      <span class="habilidad">VS Code</span>
+      <span class="habilidad">Arduino</span>
+      <span class="habilidad">Investigación UX</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="section-label">Contacto</div>
+  <h2>¿<em>Colaboramos</em>?</h2>
+  <p class="section-intro">Estoy disponible para proyectos freelance, colaboraciones y oportunidades de trabajo.</p>
+  <div class="contacto-grid">
+    <div class="contacto-links">
+      <a href="mailto:ssofia.sandoval.labbe@gmail.com" class="contacto-link">
+        <div class="contacto-link-icon">✉️</div>
+        <div>ssofia.sandoval.labbe@gmail.com<span>Correo</span></div>
+      </a>
+      <a href="https://linkedin.com/in/TUUSUARIO" target="_blank" class="contacto-link">
+        <div class="contacto-link-icon" style="font-weight:700;font-size:13px;">in</div>
+        <div>LinkedIn<span>Ver perfil</span></div>
+      </a>
+      <a href="https://github.com/TUUSUARIO" target="_blank" class="contacto-link">
+        <div class="contacto-link-icon" style="font-family:monospace;font-size:13px;">gh</div>
+        <div>GitHub<span>Ver repositorios</span></div>
+      </a>
+      <a href="https://instagram.com/TUUSUARIO" target="_blank" class="contacto-link">
+        <div class="contacto-link-icon">📷</div>
+        <div>Instagram<span>Ver perfil</span></div>
+      </a>
+    </div>
+    <div class="contacto-form">
+      <div class="form-group">
+        <label>NOMBRE</label>
+        <input type="text" placeholder="Tu nombre">
+      </div>
+      <div class="form-group">
+        <label>CORREO</label>
+        <input type="email" placeholder="tu@correo.com">
+      </div>
+      <div class="form-group">
+        <label>MENSAJE</label>
+        <textarea placeholder="Cuéntame sobre tu proyecto..."></textarea>
+      </div>
+      <button class="btn-send" onclick="enviarMensaje()">Enviar mensaje →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <img src="logo-white.png" alt="Sofía Sandoval">
+  </div>
+  <div class="footer-copy">© 2025 Sofía Sandoval Labbé</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
